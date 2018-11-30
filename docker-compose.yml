@@ -1,0 +1,15 @@
+version: '3'
+services:
+  splash:
+    container_name: splash
+    image: scrapinghub/splash
+    ports:
+      - "8050:8050"
+      - "5023:5023"
+    volumes:
+      - ./filters/etc/splash/filters
+  splash-jupyter:
+    container_name: splash-jupyter
+    image: scrapinghub/splash-jupyter
+    ports:
+      - "8888:8888"
